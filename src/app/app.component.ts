@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crictime';
+  serverElements = [
+  	{
+  		name:"Server 1", 
+  		type:"blueprint", 
+  		content:"Dev"
+  	},
+  	{
+  		name:"Server 12", 
+  		type:"server", 
+  		content:"Prod"
+  	}
+  ];
 }

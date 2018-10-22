@@ -1,0 +1,19 @@
+<hr/>
+<div>
+	Server name : {{element.name}}
+</div>	
+<div>
+
+	<p>
+		<strong *ngIf="element.type==='server'" style="color:red">{{element.content}} Server</strong>
+		<em *ngIf="element.type==='blueprint'">{{element.content}}</em>        
+	</p>
+	
+</div>
+<br/>
+<br/>
+<button 
+	[disabled]="buttonStatus"
+	(click)="addServer()"
+	>Add Server</button>
+
