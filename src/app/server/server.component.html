@@ -3,17 +3,11 @@
 	Server name : {{element.name}}
 </div>	
 <div>
-
 	<p>
-		<strong *ngIf="element.type==='server'" style="color:red">{{element.content}} Server</strong>
+		<strong onHoverGreen *ngIf="element.type==='server'; else noServer" style="color:red">{{element.content}} Server</strong>
 		<em *ngIf="element.type==='blueprint'">{{element.content}}</em>        
+		<ng-template #noServer>Hey dude, what did you just do ? </ng-template>
 	</p>
-	
 </div>
-<br/>
-<br/>
-<button 
-	[disabled]="buttonStatus"
-	(click)="addServer()"
-	>Add Server</button>
+
 

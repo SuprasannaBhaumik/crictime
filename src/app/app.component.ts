@@ -19,4 +19,14 @@ export class AppComponent {
   		content:"Prod"
   	}
   ];
+
+
+  onServerAdded(serverData: {name:string, type:string, content:string}){
+  	this.serverElements.push({
+  		name:serverData.name,
+  		type:serverData.type,
+  		content:serverData.content
+  	});
+  }
+  
 }

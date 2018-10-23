@@ -7,20 +7,29 @@ import { Component, Input } from '@angular/core';
 })
 export class ServerComponent {
 	
-	
-	buttonStatus:boolean = true;
-	serverCreatedStatus:string = "No Server is created!!!";
+	serverName:string = "";
+	serverType:string = "";
+	serverContent: string = "";
 
 	@Input() element:{name:string, type:string, content:string};
 
-	constructor(){
-		setTimeout( ()=> {
-			this.buttonStatus = false;
-		}, 5000);
+    /* Lifecycle methods are commented
+	
+	ngOnChanges() {
+		console.log("input has changed");
 	}
 
-	addServer(){
-		this.serverCreatedStatus = "Server is created successfully";
-	}
+    ngDoCheck() {
+    	console.log("always called when changes occurs like Click, Observable, etc");
+    }
 
+    ngAfterContentInit() {
+     	console.log("called once during ng-template")
+    }
+
+    ngAfterContentChecked() {
+    	console.log("called multiple times for ng-template");
+    }
+
+    */
 } 

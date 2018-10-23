@@ -1,0 +1,14 @@
+<hr/>
+<div>
+	<p>Add Server Module</p>
+	<!-- Server name passed via local reference. Others via 2 way binding-->
+	<p>   Name : <input type="text" #serverNameInput /></p>
+	<p>   Type : <input type="text" [(ngModel)] = "serverType" /></p>
+	<p>Content : <input type="text" [(ngModel)] = "serverContent" /></p>
+
+	<button 
+		[disabled]="buttonStatus"
+		(click)="addServer(serverNameInput)">
+		Add Server
+	</button>
+</div>
